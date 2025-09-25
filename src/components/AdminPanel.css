@@ -1,0 +1,132 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f2f5; /* A softer background color */
+}
+
+/* Style for the main H1 title */
+.main-title {
+    color: #343a40;
+    font-weight: 700;
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem !important;
+}
+
+.correct-answer {
+    background-color: #d1e7dd !important;
+    font-weight: 600;
+    color: #0f5132;
+}
+
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* --- Card specific for the "Add Question" form --- */
+.add-question-card .card-header {
+    background: linear-gradient(45deg, #0d6efd, #6f42c1);
+    color: white;
+}
+
+.add-question-card .card-title {
+    color: white;
+}
+
+/* --- Button Styling --- */
+.btn-primary {
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+    transform: translateY(-2px);
+}
+
+.action-buttons > * {
+    margin-left: 0.5rem;
+}
+
+.action-buttons .btn {
+    transition: all 0.2s ease;
+}
+
+.action-buttons .btn-warning:hover {
+    background-color: #ffca2c;
+    border-color: #ffc720;
+    transform: scale(1.05);
+}
+
+.action-buttons .btn-danger:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+    transform: scale(1.05);
+}
+
+.badge {
+    padding: 0.5em 0.75em;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+/* --- New Styles --- */
+.filter-container {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+}
+
+.question-group-header {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #dee2e6;
+    color: #6c757d;
+    font-weight: 600;
+}
+
+/* Difficulty Badge Colors */
+.difficulty-low {
+    background-color: #198754 !important; /* Green */
+    color: white;
+}
+
+.difficulty-medium {
+    background-color: #ffc107 !important; /* Yellow */
+    color: black;
+}
+
+.difficulty-high {
+    background-color: #dc3545 !important; /* Red */
+    color: white;
+}
+
+
+/* --- Form Input Styling --- */
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+

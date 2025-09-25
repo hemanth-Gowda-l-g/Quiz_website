@@ -1,0 +1,106 @@
+.result-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: #f0f2f5;
+}
+
+.result-card {
+    max-width: 450px;
+    width: 100%;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 5px solid #0d6efd;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.result-card .trophy-icon {
+    color: #ffc107;
+    margin-bottom: 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+.result-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: #212529;
+}
+
+.score-display {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.score-value {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #0d6efd;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.result-details {
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+    border-top: 1px solid #e9ecef;
+    padding-top: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.detail-item span {
+    color: #495057;
+}
+
+.detail-item strong {
+    font-weight: 600;
+    color: #212529;
+}
+
+.detail-item strong.correct {
+    color: #198754;
+}
+
+.detail-item strong.incorrect {
+    color: #dc3545;
+}
+
+.retake-btn {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+    border: none;
+}
+
+.retake-btn:hover {
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

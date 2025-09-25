@@ -1,0 +1,194 @@
+/* --- Background & Main Container --- */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    /* Vibrant gradient background */
+    background: linear-gradient(45deg, #6d5dcf, #e44d6c, #f9a825);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* --- The Form Card --- */
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 480px; /* Increased max-width for new fields */
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Titles & Text --- */
+.auth-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 0.75rem;
+}
+
+.auth-subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 2.5rem;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: left; /* Align labels and inputs correctly */
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #8a77e0;
+    box-shadow: 0 0 0 4px rgba(109, 93, 207, 0.2);
+    background-color: #fff;
+}
+
+/* --- Admin Toggle Switch --- */
+.admin-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #6d5dcf;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #6d5dcf;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* --- Buttons --- */
+.auth-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    background: linear-gradient(45deg, #e44d6c, #f9a825);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(228, 77, 108, 0.4);
+}
+
+.auth-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(228, 77, 108, 0.5);
+}
+
+/* --- Redirect Link --- */
+.auth-redirect {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.auth-redirect a {
+    color: #6d5dcf;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.auth-redirect a:hover {
+    color: #e44d6c;
+    text-decoration: underline;
+}
+
+/* --- Error Messages --- */
+.alert.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+

@@ -1,0 +1,49 @@
+.dashboard-container { max-width: 1200px; margin: 2rem auto; padding: 2rem; }
+.dashboard-title { text-align: center; font-weight: 700; margin-bottom: 3rem; color: #343a40; }
+.quiz-type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+.quiz-type-card { background-color: #ffffff; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.quiz-type-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); }
+.card-content { padding: 1.5rem; text-align: center; }
+.quiz-type-name { font-weight: 600; margin-bottom: 0.5rem; color: #495057; }
+.question-count { color: #6c757d; margin-bottom: 1.5rem; }
+.difficulty-selector p { font-weight: 500; margin-bottom: 1rem; color: #343a40; }
+.difficulty-buttons { display: flex; justify-content: center; gap: 1rem; }
+.difficulty-btn { border: none; padding: 0.75rem 1.5rem; border-radius: 50px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; }
+.difficulty-btn:disabled { background-color: #e9ecef !important; color: #adb5bd !important; cursor: not-allowed; opacity: 0.7; }
+.difficulty-btn:not(:disabled):hover { transform: scale(1.05); }
+/* --- REPLACE WITH THIS (NEW CODE) --- */
+.difficulty-btn.difficulty-low { 
+    background-color: #d1e7dd; 
+    color: #0f5132; 
+}
+.difficulty-btn.difficulty-medium { 
+    background-color: #fff3cd; 
+    color: #664d03; 
+}
+.difficulty-btn.difficulty-high { 
+    background-color: #f8d7da; 
+    color: #842029; 
+}
+.mixed-quiz-card { background: linear-gradient(45deg, #198754, #20c997); color: white; }
+.mixed-quiz-card .quiz-type-name, .mixed-quiz-card .question-count, .mixed-quiz-card .difficulty-selector p { color: white; }
+.mixed-quiz-card .difficulty-btn { background-color: rgba(255, 255, 255, 0.2); color: white; border: 1px solid white; }
+.mixed-quiz-card .difficulty-btn:hover:not(:disabled) { background-color: rgba(255, 255, 255, 0.3); }
+
+/* --- Global Styles referenced by other components --- */
+.loading-container, .error-container {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.5rem;
+}
+.quiz-navbar { 
+    padding: 1rem 2rem; 
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+    border-bottom: 1px solid #dee2e6;
+}
+.quiz-navbar .navbar-brand { 
+    color: #343a40; 
+    font-size: 1.5rem; 
+    font-weight: 600; 
+}
+
